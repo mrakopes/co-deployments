@@ -29,7 +29,7 @@ registry: "quay.io"
 # Kubelet root directory path
 kubeletRootDir: "/var/lib/kubelet/"
 
-# NodeGetVolumestats will be called by default, set true to disable the call 
+# NodeGetVolumestats will be called by default, set true to disable the call
 disableNodeGetVolumeStats: false
 
 controller:
@@ -71,3 +71,6 @@ node:
   tolerations: []
 
   affinity: {}
+
+  # override node hpe-csi-driver image
+  image: quay.io/hpestorage/csi-driver:v2.2.0
