@@ -15,6 +15,7 @@ disableNodeConformance: false
 # imagePullPolicy applied for all hpe-csi-driver images
 imagePullPolicy: "IfNotPresent"
 
+
 # Cluster wide values for CHAP authentication
 iscsi:
   chapUser: ""
@@ -74,3 +75,7 @@ node:
 
   # override node hpe-csi-driver image
   image: quay.io/hpestorage/csi-driver:v2.2.0
+
+  imagePullSecrets:
+  - name: regsecret
+

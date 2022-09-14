@@ -130,7 +130,7 @@
 		],
 		"Ubuntu": null
 	},
-	"3PARdata": {
+	"3PARdata":{
 		"Default": [
 			{
 				"category": "iscsi",
@@ -342,7 +342,7 @@
 				"severity": "critical",
 				"description": "queueing is recommended for 150 seconds, with no_path_retry value of 18. Can be set in /etc/multipath.conf",
 				"parameter": "no_path_retry",
-				"recommendation": "18"
+				"recommendation": "queue"
 			},
 			{
 				"category": "multipath",
@@ -364,13 +364,6 @@
 				"description": "group paths according to ALUA path priority of active/standby. Recommended to be set to group_by_prio in /etc/multipath.conf",
 				"parameter": "path_grouping_policy",
 				"recommendation": "group_by_prio"
-			},
-			{
-				"category": "multipath",
-				"severity": "critical",
-				"description": "getuid_callout whitelist is recommended. Can be set in /etc/multipath.conf",
-				"parameter": "getuid_callout",
-				"recommendation": "\"/lib/udev/scsi_id --whitelisted --device=/dev/%n\""
 			},
 			{
 				"category": "multipath",

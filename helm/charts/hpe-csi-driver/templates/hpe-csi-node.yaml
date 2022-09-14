@@ -32,6 +32,9 @@ spec:
         options:
           - name: ndots
             value: "1"
+
+      imagePullSecrets:
+        {{ toYaml .Values.node.imagePullSecrets | indent 8 }}
       containers:
         - name: csi-node-driver-registrar
           {{- if and (.Values.registry) (eq .Values.registry "quay.io") }}
